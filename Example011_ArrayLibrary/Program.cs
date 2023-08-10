@@ -26,7 +26,7 @@ int IndexOf(int[] collection, int find)
 {
     int count = collection.Length;
     int index = 0;
-    int position = 0;
+    int position = -1;  // If result equals to "-1", then the element has been found
     while (index < count)
     {
         if(collection[index] == find)
