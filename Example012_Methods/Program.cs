@@ -140,6 +140,7 @@ void PrintArray(int[] array)
 
 PrintArray(arr);
 
+// From minimum to max
 void SelectionSort(int[] array)
 {
     for (int i=0; i<array.Length; i++)
@@ -158,4 +159,25 @@ void SelectionSort(int[] array)
 }
 
 SelectionSort(arr);
+PrintArray(arr);
+
+// From max to minimum
+void SelectionSortMaxToMin(int[] array)
+{
+    for (int i=0; i<array.Length; i++)
+    {
+        int maxPosition = i;
+
+        for (int j=i+1; j<array.Length; j++)
+        {
+            if(array[j]>array[i]) maxPosition=j;
+        }
+
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+    }
+}
+
+SelectionSortMaxToMin(arr);
 PrintArray(arr);
