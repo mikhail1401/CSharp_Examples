@@ -94,6 +94,50 @@ void PrintImage(int[,] image)
     }
 }
 
-void FillImage(int row, int column)
+void FillImage(int row, int column)     // example of recursion when function calls itself
+{
+    if(pic[row, column] == 0 )
+    {
+        pic[row, column] = 1;
+        FillImage(row-1, column);
+        FillImage(row, column-1);
+        FillImage(row + 1, column);
+        FillImage(row, column + 1);
+    }
+}
 
 PrintImage(pic);
+FillImage(13, 13);
+PrintImage(pic);
+
+
+// Recursion - when function calls itself
+Console.WriteLine("\nRecursion");
+
+double Factorial (double n)
+{
+    // 0! = 1
+    // 1! = 1
+    if (n == 1) return 1;
+    else return n * Factorial(n-1);
+}
+
+Console.WriteLine(Factorial(40));  
+
+
+Console.WriteLine("\nFibonacci recursion");
+
+// f(1) = 1
+// f(2) = 1
+// f(n) = f(n-1) + f(n-2)
+
+int Fibonacci(int n)
+{
+    if(n == 1 || n == 2) return 1;
+    else return Fibonacci(n-1) + Fibonacci(n-2);
+}
+
+for (int i = 1; i < 40; i++)
+{
+    System.Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+}
