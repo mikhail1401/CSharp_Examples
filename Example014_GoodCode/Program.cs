@@ -6,9 +6,11 @@
 // You won't need it
 // Keep it simple, stupid
 
-// Use libraries:
+// Use libraries like System.Linq on top:
 
-string text = "(1,2) (2,3) (4,5) (6,7)";
+string text = "(1,2) (2,3) (4,5) (6,7)"
+                .Replace("(", "")
+                .Replace(")", "");
 
 var data = text.Split(" ")
             .ToArray();
