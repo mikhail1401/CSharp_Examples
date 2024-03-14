@@ -28,7 +28,7 @@ Console.WriteLine(NumbersFor(1, 10)); // 1 2 3 4 5 6 7 8 9 10
 Console.WriteLine(NumbersRec(1, 10)); // 1 2 3 4 5 6 7 8 9 10
 
 
-Console.WriteLine("\nTask 2");
+Console.WriteLine("Task 2");
 // Собрать строку с числами от a до b, a>=b
 
 // Without recursion
@@ -37,16 +37,16 @@ string NumbersFor2(int a, int b)
     string result = string.Empty;
     for (int i = a; i>=b; i--)
     {
-        result `;= $"{i}";
+        result += $"{i}";
     }
     return result;
 }
 
 string NumbersRec2(int a, int b)
 {
-        if (a<=b) return NumbersRec(a+1, b) + $"{a}";
+        if (a>=b) return $"{a}" + NumbersRec2(a - 1, b);
         else return string.Empty;
 }
 
-Console.WriteLine(NumbersFor2(1, 10));
-Console.WriteLine(NumbersRec2(1, 10));
+Console.WriteLine(NumbersFor2(10, 1));
+Console.WriteLine(NumbersRec2(10, 1));
