@@ -50,3 +50,26 @@ string NumbersRec2(int a, int b)
 
 Console.WriteLine(NumbersFor2(10, 1));
 Console.WriteLine(NumbersRec2(10, 1));
+
+
+Console.WriteLine("Task 3");
+// Сумма чисел от 1 до n
+
+// Regular solution
+int SumFor(int n)
+{
+    int result = 0;
+    for (int i = 1; i <= n; i++) result += i;
+    return result;
+}
+
+
+// With recursion
+int SumForRec(int n)
+{
+    if (n== 0) return 0;
+    else return n + SumForRec(n-1);
+}
+
+Console.WriteLine(SumFor(4));
+Console.WriteLine(SumForRec(4));
