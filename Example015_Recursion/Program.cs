@@ -93,6 +93,28 @@ int FactorialForRec(int n)
     else return n * (FactorialForRec(n - 1));
 }
 
-
 Console.WriteLine(FactorialFor(4));     // 24
 Console.WriteLine(FactorialForRec(4));  // 24
+
+
+Console.WriteLine("Task 5");
+// Вычислить a^n
+
+// Regular solution
+int PowerFor(int a, int n)
+{
+    int result = 1;
+    for (int i=1; i<=n; i++) result*=a;
+    return result;
+}
+
+// Using recursion
+int PowerForRec(int a, int n)
+{
+    return n == 0 ? 1 : PowerForRec(a, n-1) * a;
+    // if (n==0) return 1;
+    // else return PowerForRec(a, n-1) * a;
+}
+
+Console.WriteLine(PowerFor(2, 3));      // 8
+Console.WriteLine(PowerForRec(2, 3));   // 8
