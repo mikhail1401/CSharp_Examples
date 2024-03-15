@@ -71,8 +71,8 @@ int SumForRec(int n)
     else return n + SumForRec(n-1);
 }
 
-Console.WriteLine(SumFor(4));
-Console.WriteLine(SumForRec(4));
+Console.WriteLine(SumFor(4));      // 10
+Console.WriteLine(SumForRec(4));   // 10
 
 
 Console.WriteLine("Task 4");
@@ -86,7 +86,13 @@ int FactorialFor(int n)
     return reuslt;
 }
 
-Console.WriteLine(FactorialFor(4));
+// Using recursion
+int FactorialForRec(int n)
+{
+    if (n == 1) return n;
+    else return n * (FactorialForRec(n - 1));
+}
 
-//
 
+Console.WriteLine(FactorialFor(4));     // 24
+Console.WriteLine(FactorialForRec(4));  // 24
