@@ -17,7 +17,7 @@ string NumbersFor(int a, int b)
     return result;
 }
 
-// With recursion
+// Using recursion
 string NumbersRec(int a, int b)
 {
     if (a<=b) return $"{a}" + NumbersRec(a + 1, b);
@@ -42,6 +42,7 @@ string NumbersFor2(int a, int b)
     return result;
 }
 
+// Using recursion
 string NumbersRec2(int a, int b)
 {
         if (a>=b) return $"{a}" + NumbersRec2(a - 1, b);
@@ -63,7 +64,6 @@ int SumFor(int n)
     return result;
 }
 
-
 // With recursion
 int SumForRec(int n)
 {
@@ -73,3 +73,20 @@ int SumForRec(int n)
 
 Console.WriteLine(SumFor(4));
 Console.WriteLine(SumForRec(4));
+
+
+Console.WriteLine("Task 4");
+// Факториал числа
+
+// Regular solution
+int FactorialFor(int n)
+{
+    int reuslt = 1;
+    for (int i=1; i<=n; i++) reuslt *= i;
+    return reuslt;
+}
+
+Console.WriteLine(FactorialFor(4));
+
+//
+
