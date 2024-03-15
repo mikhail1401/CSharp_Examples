@@ -116,5 +116,14 @@ int PowerForRec(int a, int n)
     // else return PowerForRec(a, n-1) * a;
 }
 
-Console.WriteLine(PowerFor(2, 3));      // 8
-Console.WriteLine(PowerForRec(2, 3));   // 8
+// Mathematically enhanced recursion solution
+int PowerForRecMath(int a, int n)
+{
+    if (n==0) return 1;
+    else if (n%2 == 0) return PowerForRecMath(a*a, n/2);
+    else return PowerForRecMath(a, n-1) * a;
+}
+
+Console.WriteLine(PowerFor(2, 4));          // 16
+Console.WriteLine(PowerForRec(2, 4));       // 16
+Console.WriteLine(PowerForRecMath(2, 4));   // 16
