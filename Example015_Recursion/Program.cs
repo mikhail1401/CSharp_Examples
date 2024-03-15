@@ -127,3 +127,43 @@ int PowerForRecMath(int a, int n)
 Console.WriteLine(PowerFor(2, 4));          // 16
 Console.WriteLine(PowerForRec(2, 4));       // 16
 Console.WriteLine(PowerForRecMath(2, 4));   // 16
+
+
+Console.WriteLine("Task 6");
+// Перебор слов 
+// В некотором машинном алфавите имеются четыре бувы
+// "а", "и", "с", и "в". Покажите все слова,
+// состоящие из Т букв, которые можно построить из букв
+// этого алфавита.
+
+
+void PossibleWords()
+{
+    char[] letters = {'а', 'и', 'с', 'в'};
+
+    int count = letters.Length;
+
+    int n=1;
+
+    for (int i=0; i<count; i++)
+    {
+        for (int j=0; j<count; j++)
+        {
+            for (int k=0; k<count; k++)
+            {
+                for (int l=0; l<count; l++)
+                {
+                    for (int m=0; m<count; m++)
+                    {
+                        Console.WriteLine($"{n++, -5}{letters[i]}{letters[j]}{letters[k]}{letters[l]}{letters[m]}");
+                                            // "-5" is a formatting specifier which specifies the minimum width of the output.
+                                            // "-" means left alignment and spaces to the right
+                                            // "+" means right alignment and spaces to the left
+                    }
+                }
+            }
+        }
+    }
+}
+
+PossibleWords();
