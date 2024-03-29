@@ -81,9 +81,9 @@ Console.WriteLine("Task 4");
 // Regular solution
 int FactorialFor(int n)
 {
-    int reuslt = 1;
-    for (int i=1; i<=n; i++) reuslt *= i;
-    return reuslt;
+    int result = 1;
+    for (int i=1; i<=n; i++) result *= i;
+    return result;
 }
 
 // Using recursion
@@ -184,4 +184,3 @@ void FindWordsRec(string alphabet, char[] word, int length = 0)
 }
 
 // FindWords();
-FindWordsRec("аисв", new char[5]);
