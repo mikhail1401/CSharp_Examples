@@ -140,7 +140,7 @@ Console.WriteLine("Task 6");
 // Regular solution
 void FindWords()
 {
-    char[] letters = {'а', 'и', 'с', 'в'};
+    char[] letters = {'a', 'b', 'c', 'd'};
 
     int count = letters.Length;
 
@@ -183,4 +183,4 @@ void FindWordsRec(string alphabet, char[] word, int length = 0)
     }
 }
 
-// FindWords();
+FindWords();
