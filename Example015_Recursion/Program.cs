@@ -137,7 +137,7 @@ Console.WriteLine("Task 6");
 // этого алфавита.
 
 
-// Regular solution
+// Regular solution for a words consisting of 5 letters
 void FindWords()
 {
     char[] letters = {'a', 'b', 'c', 'd'};
@@ -167,8 +167,9 @@ void FindWords()
     }
 }
 
-// Using recursion
-int count=1;
+// Using recursion (universal solution)
+int count = 1;
+
 void FindWordsRec(string alphabet, char[] word, int length = 0)
 {
     if (length == word.Length)
@@ -176,6 +177,7 @@ void FindWordsRec(string alphabet, char[] word, int length = 0)
         Console.WriteLine($"{count++, -5}{new String(word)}");
         return;
     }
+
     for (int i=0; i<alphabet.Length; i++)
     {
         word[length] = alphabet[i];
@@ -183,4 +185,5 @@ void FindWordsRec(string alphabet, char[] word, int length = 0)
     }
 }
 
-FindWords();
+// FindWords();
+FindWordsRec ("abcd", new char[2]);
