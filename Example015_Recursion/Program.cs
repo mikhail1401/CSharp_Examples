@@ -186,4 +186,4 @@ void FindWordsRec(string alphabet, char[] word, int length = 0)
 }
 
 // FindWords();
-FindWordsRec ("abcd", new char[2]);
+FindWordsRec ("abcd", new char[3]);
